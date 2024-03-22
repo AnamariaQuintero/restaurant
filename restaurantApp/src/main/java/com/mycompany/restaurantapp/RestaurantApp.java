@@ -6,12 +6,10 @@ import com.mycompany.restaurantapp.food.Menu;
 import com.mycompany.restaurantapp.values.CustomerRoles;
 import com.mycompany.restaurantapp.values.DishType;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class RestaurantApp {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         Customer student = new Customer(CustomerRoles.STUDENT, "192240", "Anamaria");
         student.sellFood();
         
@@ -33,27 +31,33 @@ public class RestaurantApp {
         menu.addDish(dinner1);
         menu.addDish(dinner2);
         
-        System.out.println("Platos para el desayuno:");
-        ArrayList<String> breakfastDishes = menu.getDishesPerType(DishType.BREAKFAST);
-        for (String dish : breakfastDishes) {
-            System.out.println(dish);
-        }
+        //Arreglar esto en la clase menu
+//        System.out.println("--------------------------");
+//
+//        System.out.println("Platos para el desayuno:");
+//        ArrayList<String> breakfastDishes = menu.getDishesPerType(DishType.BREAKFAST);
+//        for (String dish : breakfastDishes) {
+//            System.out.println(dish);
+//        }
+//        
+//        System.out.println("--------------------------");
+//        
+//        System.out.println("Platos para el almuerzo:");
+//        ArrayList<String> lunchDishes = menu.getDishesPerType(DishType.LUNCH);
+//        for (String dish : lunchDishes) {
+//            System.out.println(dish);
+//        }
+//        
+//        System.out.println("--------------------------");
+//        
+//        System.out.println("Platos para la comida:");
+//        ArrayList<String> dinnerDishes = menu.getDishesPerType(DishType.DINNER);
+//        for (String dish : dinnerDishes) {
+//            System.out.println(dish);
+//        }
         
-        System.out.println("--------------------------");
+        menu.showMenu();
         
-        System.out.println("Platos para el almuerzo:");
-        ArrayList<String> lunchDishes = menu.getDishesPerType(DishType.LUNCH);
-        for (String dish : lunchDishes) {
-            System.out.println(dish);
-        }
-        
-        System.out.println("--------------------------");
-        
-        System.out.println("Platos para la comida:");
-        ArrayList<String> dinnerDishes = menu.getDishesPerType(DishType.DINNER);
-        for (String dish : dinnerDishes) {
-            System.out.println(dish);
-        }
-        
+        menu.showBreakfast();
     }
 }

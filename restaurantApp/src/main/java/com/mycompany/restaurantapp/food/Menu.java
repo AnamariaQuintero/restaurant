@@ -22,7 +22,6 @@ public class Menu {
         // ArrayList<Dish> foundDishes = new ArrayList<>();
         ArrayList<String> foundDishes = new ArrayList<>();
         
-        
         for (Dish dish : dishList){
             if(dish.getType() == dishType){
                 foundDishes.add(dish.getName());
@@ -32,4 +31,16 @@ public class Menu {
         return foundDishes;
     }
     
+    public void showMenu(){
+        for (DishType dishType: DishType.values()){
+            for(Dish dish : dishList){
+            System.out.println(dish.getName());
+           }
+            System.out.println("*** --- " + dishType  + " --- ***");
+        }
+    }
+    
+    public void showBreakfast(){
+        
+    }
 }
