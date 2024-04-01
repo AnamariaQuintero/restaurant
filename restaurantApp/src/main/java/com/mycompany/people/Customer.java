@@ -17,9 +17,10 @@ public class Customer {
     }
     
     void buyFood(){
+        
     }
     
-    void cancelBut(){
+    void cancelBuy(){
     }
     
     public void sellFood(){
